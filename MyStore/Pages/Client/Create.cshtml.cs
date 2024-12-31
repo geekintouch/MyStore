@@ -36,7 +36,8 @@ namespace MyStore.Pages.Client
                 using(SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    String sql = "INSERT INTO clients" + "(@name, @email, @phone, @address);";
+                    String sql = "INSERT INTO clients" + "(name, email, phone, address) VALUES " 
+                        + "(@name, @email, @phone, @address) ;";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -56,11 +57,13 @@ namespace MyStore.Pages.Client
                 return;
             }
 
-            //clientInfo.name = "";
+            clientInfo.name = "";
             clientInfo.email = "";
             clientInfo.phone = "";
-            clientInfo.address="";
+            clientInfo.address = "";
             successMessage = "New Client Added Successfully";
+
+            Response.Redirect("/Client/Index");
 
         }
     }
