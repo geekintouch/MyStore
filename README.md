@@ -10,12 +10,12 @@ Visual Studio 2022
 ## Installation
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/geekintouch/local_store.git
+   git clone https://github.com/geekintouch/MyStore.git
    ```
    
 2. **Navigate into the project directory**
     ```bash
-    cd local_store
+    cd MyStore
     ```
 
 3. **Restore Dependencies**
